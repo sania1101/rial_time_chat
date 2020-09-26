@@ -1,0 +1,39 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "y",
+  "main": "index.js",
+  "scripts": {
+    "ts:watch": "tsc -w",
+    "ts:build": "tsc",
+    "serve": "nodemon dist/index.js",
+    "watch": "concurrently \"npm run ts:watch\" \"npm run serve\"",
+    "build": "npm run ts:build",
+    "prod:serve": "node dist/index.js",
+    "start": "npm run build && npm run prod:serve",
+    "tslint": "tslint -c tslint.json -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sania1101/rial_time_chat.git"
+  },
+  "author": "sania",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sania1101/rial_time_chat/issues"
+  },
+  "homepage": "https://github.com/sania1101/rial_time_chat#readme",
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.11.2",
+    "@types/winston": "^2.4.4",
+    "express": "^4.17.1",
+    "typescript": "^4.0.3",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "tslint": "^5.5.0"
+  }
+}
